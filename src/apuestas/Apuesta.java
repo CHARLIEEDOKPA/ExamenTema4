@@ -2,6 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+
+/**
+ * @Autor Charlie Onosetale Edokpa Aigbiremhon
+ * @Version 22/02/2023
+ */
 package apuestas;
 
 
@@ -17,6 +22,12 @@ public class Apuesta {
     }
 
     /*Contructor por parámetros*/
+    /**
+     * 
+     * @param dinero_disp El parametro es el dinero disponible
+     * @param goles_local El parametro es para los goles metidos en local
+     * @param goles_visitante El parametro es para los goles metidos en visitante
+     */
     public Apuesta(int dinero_disp, int goles_local, int goles_visitante) {
         this.dinero_disp = dinero_disp;
         this.goles_local = goles_local;
@@ -29,7 +40,11 @@ public class Apuesta {
         return dinero_disp;
     }
     /*Método para modificar el valor del atributo dinero_disp*/
-
+    
+    /**
+     * 
+     * @param dinero_disp Para asignar el dinero disponible 
+     */
     public void setDinero_disp(int dinero_disp) {
         this.dinero_disp = dinero_disp;
     }
@@ -55,6 +70,14 @@ public class Apuesta {
      * En caso de que lo haya acertado devuelve true. Chequea que no se metan menos de 0 goles
      * 
      */
+    
+    /**
+     * 
+     * @param local El parametro es para la cantidad de goles en local
+     * @param visitante El parametro es para la cantidad de goles en visitante
+     * @return El resultado devuelve si se ha acertado los goles en visitante y local
+     * @throws Exception 
+     */
 
     public boolean comprobar_resultado(int local, int visitante) throws Exception {
         boolean acertado = false;
@@ -73,6 +96,13 @@ public class Apuesta {
      * Este método se va a probar con Junit
      */
 
+    
+    /**
+     * 
+     * @param cantidad_goles_local Cantidad de goles en local
+     * @param cantidad_goles_visit Cantidad de goles en visitante
+     * @throws Exception 
+     */
     void cobrar_apuesta(int cantidad_goles_local, int cantidad_goles_visit) throws Exception {
 
         if (comprobar_resultado(cantidad_goles_local, cantidad_goles_visit) == false) {
