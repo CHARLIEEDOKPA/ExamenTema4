@@ -11,10 +11,10 @@ public class Apuestas {
         Apuesta laApuesta;
         int mi_dinero;
 
-        operativa_Apuesta();
+        operativa_Apuesta(0);
     }
 
-    public static void operativa_Apuesta() {
+    public static void operativa_Apuesta(int dinero) {
         Apuesta laApuesta;
         int mi_dinero;
         laApuesta = new Apuesta(1000, 4, 2);
